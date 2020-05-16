@@ -1,17 +1,17 @@
-const isMomHappy = false;
+// const isMomHappy = false;
 
-const willIGetPhone = new Promise((resolve, reject) => {
-    if (isMomHappy) {
-        const phone = {
-            brand: 'Apple',
-            model: 11
-        };
-        resolve(phone);
-    } else {
-        const reason = new Error('You got less marks in exam');
-        reject(reason);
-    }
-});
+// const willIGetPhone = new Promise((resolve, reject) => {
+//     if (isMomHappy) {
+//         const phone = {
+//             brand: 'Apple',
+//             model: 11
+//         };
+//         resolve(phone);
+//     } else {
+//         const reason = new Error('You got less marks in exam');
+//         reject(reason);
+//     }
+// });
 
 // const askMom = () => {
 //     willIGetPhone
@@ -55,3 +55,37 @@ const willIGetPhone = new Promise((resolve, reject) => {
 // setTimeout(function(){console.log("2");},3000);
 // console.log("3");
 // setTimeout(function(){console.log("4");},1000);
+
+const cities = [
+    {title: 'London', location: 'Europe'},
+    {title: 'Tokyo', location: 'Asia'}
+];
+
+const getCities = () => {
+    const ul = document.querySelector('ul');
+    setTimeout(() => {
+        cities.map((city) => {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(city.title));
+            ul.appendChild(li);
+        });
+    }, 2000);
+}
+
+const createCity = (city) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            cities.push(city);
+            const err = false;
+            if (!err)    resolve();
+            else reject('Error occured while inserting');
+        }, 2000);
+    });
+}
+
+const init = async () => {
+    const response = createCity({title: 'Mumbai', location: 'Asia'});
+    await getCities();
+};
+
+init();

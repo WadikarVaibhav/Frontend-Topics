@@ -1,0 +1,18 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+}
+
+.one {
+    float: left;
+    padding: 10px;
+}
+
+.two {
+    padding: 10px;
+    display: none;
+}
+
+.one:hover + .two {
+    display: block;
+}

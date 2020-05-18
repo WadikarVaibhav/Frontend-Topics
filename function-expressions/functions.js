@@ -107,3 +107,14 @@
 // }
 
 // console.log(name+" is was once "+a);
+
+
+class person {
+    education = (degree) => {
+        console.log(this);
+        console.log(`${this} has studies ${degree}`);
+    }
+};
+
+const vaibhav = new person();
+vaibhav.education('MS');

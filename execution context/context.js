@@ -182,3 +182,15 @@
 
 
 
+//console.log should be used only with serialized or immutable data
+//otherwise json.stringify or dubug
+
+player = { 
+    name: 'Vaibhav',
+    age: 25
+};
+
+console.log(player);
+console.log(JSON.stringify(player));
+
+player.country = 'India';

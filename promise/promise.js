@@ -91,37 +91,37 @@
 // init();
 
 
-const cities = [
-    {name: 'Mumbai', country: 'India'},
-    {name: 'London', country: 'UK'},
-    {name: 'San Francisco', country: 'USA'}
-];
+// const cities = [
+//     {name: 'Mumbai', country: 'India'},
+//     {name: 'London', country: 'UK'},
+//     {name: 'San Francisco', country: 'USA'}
+// ];
 
-const getCities = () => {
-    const ul = document.querySelector('ul');
-    setTimeout(() => {
-        cities.map((city) => {
-            const li = document.createElement('li');
-            li.appendChild(document.createTextNode(city.name));
-            ul.appendChild(li);
-        });
-    }, 2000);
-};
+// const getCities = () => {
+//     const ul = document.querySelector('ul');
+//     setTimeout(() => {
+//         cities.map((city) => {
+//             const li = document.createElement('li');
+//             li.appendChild(document.createTextNode(city.name));
+//             ul.appendChild(li);
+//         });
+//     }, 2000);
+// };
 
-const createCity = (city) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            cities.push(city);
-            const err = false;
-            if (!err)   resolve();
-            else reject('503 Internal Server Error');
-        }, 2000);
-    });
-}
+// const createCity = (city) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             cities.push(city);
+//             const err = false;
+//             if (!err)   resolve();
+//             else reject('503 Internal Server Error');
+//         }, 2000);
+//     });
+// }
 
-const demo = async () => {
-    const response = await createCity({name: 'Hyderabad', country: 'India'});
-    getCities();
-};
+// const demo = async () => {
+//     const response = await createCity({name: 'Hyderabad', country: 'India'});
+//     getCities();
+// };
 
-demo();
+// demo();

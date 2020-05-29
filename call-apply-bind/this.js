@@ -115,3 +115,106 @@
 //       })
 //     }.bind(this)
 //   })
+
+
+// const generateObj = (name, age) => {
+//     return {
+//         name,
+//         age
+//     }
+// }
+
+// console.log(generateObj('Vaibhav', 25));
+
+//Array destructuring
+// const data = [1,2,3];
+
+// const [a, b, c = 4] = data;
+
+// console.log(a , b, c);
+
+
+//Object destructuring
+// const person = {name: 'Vaibhav', age: 25};
+
+// const {name, age} = person;
+
+// console.log(name, age);
+
+
+//Nested destructuring
+// const data = {arr: [1,2,3]}
+
+// const {arr:[,b]}  = data;
+
+// console.log(b);
+
+// const response = {
+//     data: {
+//         date: '08 Mar 1995',
+//         age: 25,
+//         degrees: ['B.E', 'M.S'],
+//         parents: {
+//             mother: {
+//                 //name: 'Jyoti',
+//                 age: 48
+//             },
+//             father: {
+//                 name: 'Vikas',
+//                 age: 58
+//             }
+//         }
+//     }
+// }
+
+// const {
+//     data: {
+//         parents: {
+//             mother: {
+//                 name: motherName =  'Jyotii'
+//             }
+//         }
+// }} = response;
+
+// console.log(motherName);
+
+// const courses = [
+
+//     {
+//         title: 'Linear Algebra II',
+//         description: 'Advanced linear algebra.',
+//         texts: [{
+//             author: 'James Smith',
+//             price: 120,
+//             ISBN: '912-6-44-578441-1'
+//         }]
+//     },
+//     {
+//         title: 'Linear Algebra II',
+//         description: 'Advanced linear algebra.',
+//         texts: [{
+//             author: 'James Smith',
+//             price: 120,
+//             ISBN: '912-6-44-578441-2'
+//         }]
+//     },
+//     {
+//         title: 'Linear Algebra II',
+//         description: 'Advanced linear algebra.',
+//         texts: [{
+//             author: 'James Smith',
+//             price: 120,
+//             ISBN: '912-6-44-578441-3'
+//         }]
+//     }
+// ]
+
+// const [{
+//     texts: [
+//         {
+//             ISBN
+//         }
+//     ]
+// }] = courses;
+
+// console.log(ISBN);

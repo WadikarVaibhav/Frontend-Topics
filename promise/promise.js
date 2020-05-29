@@ -125,3 +125,26 @@
 // };
 
 // demo();
+
+// setTimeout(() => {
+//     for (let i=0;i<0;i++) console.log(i);
+// }, 0);
+
+// setTimeout(() => {
+//     console.log('second');
+// }, 0);
+
+const isResolve = false;
+
+const response = new Promise((resolve, reject) => {
+    if (isResolve) resolve('Hello');
+    else reject('No hello!');
+});
+
+response.then((val) => {
+    console.log(val);
+}, (errInThen) => {
+    console.log('In then: '+errInThen);
+}).catch((err) => {
+    console.log(err);
+});
